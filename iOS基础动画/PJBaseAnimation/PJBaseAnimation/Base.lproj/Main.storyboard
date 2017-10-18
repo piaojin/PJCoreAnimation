@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SFN-cz-WOR">
+                                <rect key="frame" x="26" y="54" width="62" height="41"/>
+                                <color key="backgroundColor" red="1" green="0.68685023889999997" blue="0.27033857230000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="DZG-LX-Cha"/>
+                                    <constraint firstAttribute="width" constant="62" id="NaW-9F-Ngi"/>
+                                </constraints>
+                                <state key="normal" title="平移动画"/>
+                                <connections>
+                                    <action selector="moveAnimation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="y4j-Kn-OAR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rWQ-wI-XeB">
+                                <rect key="frame" x="123" y="54" width="62" height="41"/>
+                                <color key="backgroundColor" red="1" green="0.68685023889999997" blue="0.27033857230000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="62" id="3E6-V8-mgd"/>
+                                    <constraint firstAttribute="height" constant="41" id="6KW-bT-3K3"/>
+                                </constraints>
+                                <state key="normal" title="缩放动画"/>
+                                <connections>
+                                    <action selector="scaleAnimation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1a4-8p-NiE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5YU-4U-p8k">
+                                <rect key="frame" x="224" y="54" width="62" height="41"/>
+                                <color key="backgroundColor" red="1" green="0.68685023889999997" blue="0.27033857230000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="62" id="TLK-iN-9SD"/>
+                                    <constraint firstAttribute="height" constant="41" id="m4t-rM-B3i"/>
+                                </constraints>
+                                <state key="normal" title="旋转动画"/>
+                                <connections>
+                                    <action selector="rotateAnimation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LBm-VI-DRk"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="rWQ-wI-XeB" firstAttribute="leading" secondItem="SFN-cz-WOR" secondAttribute="trailing" constant="35" id="0Zy-TL-sAa"/>
+                            <constraint firstItem="rWQ-wI-XeB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="34" id="5jr-L6-b5J"/>
+                            <constraint firstItem="SFN-cz-WOR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="26" id="IGq-oW-wXH"/>
+                            <constraint firstItem="SFN-cz-WOR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="34" id="OtB-HU-IRx"/>
+                            <constraint firstItem="5YU-4U-p8k" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="34" id="QIF-uG-0yV"/>
+                            <constraint firstItem="5YU-4U-p8k" firstAttribute="leading" secondItem="rWQ-wI-XeB" secondAttribute="trailing" constant="39" id="eV7-mZ-liB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="moveView" destination="SFN-cz-WOR" id="iyW-KU-7eQ"/>
+                        <outlet property="rotateView" destination="5YU-4U-p8k" id="dZM-yl-iTP"/>
+                        <outlet property="scaleView" destination="rWQ-wI-XeB" id="hrI-xf-KiE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="124.58770614692655"/>
+        </scene>
+    </scenes>
+</document>
